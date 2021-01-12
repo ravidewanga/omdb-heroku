@@ -14,7 +14,7 @@ input.addEventListener("keyup", function (event) {
         
         loader.style.display = "block";
 
-        fetch('http://localhost:3000/getDetails?search=' + search_data)
+        fetch('/getDetails?search=' + search_data)
             .then(response => response.json())
             .then(data => { 
                 var x = '';
