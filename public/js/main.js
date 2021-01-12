@@ -11,7 +11,7 @@ input.addEventListener("keyup", function (event) {
             fetch_record.innerHTML = '<p style="color:red;">Enter Movie Name.</p>';
             return false;
         }
-
+        
         loader.style.display = "block";
 
         fetch('http://localhost:3000/getDetails?search=' + search_data)
@@ -41,6 +41,7 @@ input.addEventListener("keyup", function (event) {
                 }
                 
                 fetch_record.innerHTML = x;
+                loader.style.display = "none";
             });
     }
 });
